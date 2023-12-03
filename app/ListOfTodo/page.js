@@ -40,7 +40,7 @@ const ListOfTodo = () => {
               <p className="my-4 text-xl font-Quicksand">Description: {post.description}</p>
               <p className="my-4 text-xl">Date: {post.date}</p>
                 <div className="flex mb-6">
-                    <Link href={`/UpdateTodo/${post._id}`} className="duration-300 bg-green-600 hover:bg-green-900 text-white ml-4 px-[8px] py-[4px] justify-center items-center rounded">Edit</Link>
+                    <Link href={`/UpdateTodo/${post._id}`} className="duration-300 bg-green-600 hover:bg-green-900 text-white mr-6 px-[8px] py-[4px] justify-center items-center rounded">Edit</Link>
                     <button className="px-4 py-2 rounded mr-4 duration-300 hover:bg-red-900 bg-red-500 text-white" onClick={() => handleDelete(post._id)}>Delete</button>
                 </div>
             </div>

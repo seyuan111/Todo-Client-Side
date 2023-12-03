@@ -4,6 +4,7 @@ import axios from 'axios'
 import Link from 'next/link'
 import 'tailwindcss/tailwind.css';
 import NavBar from '../components/NavBar'
+import { BiArrowBack } from 'react-icons/bi';
 import { useRouter } from 'next/navigation'
 
 
@@ -16,6 +17,10 @@ const NewTodo = () => {
       })
 
     const router = useRouter();
+
+    const goBack = () => {
+      router.back();
+    };
 
     const handleChange = e => {
         setPost({...post, [e.target.name]: e.target.value}) //e.target.name = what they are typing while e.target.value is where they are typing
@@ -30,7 +35,8 @@ const NewTodo = () => {
   return (
     <div>
     <NavBar />
-    <h1 className="font-bold text-xl mt-4">Add Post:</h1>
+    <BiArrowBack onClick={goBack} className="text-black cursor-pointer text-[20px] my-6" />
+    <h1 className="font-bold text-xl mt-4 font-Cinzel">Add Post:</h1>
     <div className="mt-4">
       <form className="flex flex-col" onSubmit={handleSubmit}>
 
